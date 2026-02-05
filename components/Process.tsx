@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Process() {
     const steps = [
@@ -34,50 +38,58 @@ export default function Process() {
         },
     ];
 
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
-        <section id="process" className="py-32 bg-[#050505] text-white overflow-hidden">
-            <div className="max-w-[1400px] mx-auto px-6">
-                <h2 className="text-sm font-sans uppercase tracking-[0.2em] mb-16 text-slate-500">
+        <section id="process" className="py-24 bg-[#050505] text-white overflow-hidden min-h-[800px] flex flex-col justify-center">
+            <div className="max-w-6xl mx-auto px-6 w-full">
+                <h2 className="text-sm font-sans uppercase tracking-[0.2em] mb-12 text-slate-500">
                     La Metodología
                 </h2>
 
-                {/* Horizontal Scroll Container */}
-                <div className="flex gap-8 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide">
-                    {steps.map((step, i) => {
-                        const isEven = i % 2 === 0;
-                        const bgClass = isEven ? "bg-[#f5f2d8] text-black" : "bg-white/5 text-white";
-                        const numClass = isEven ? "text-black/20" : "text-white/20";
-                        const descClass = isEven ? "text-gray-800" : "text-slate-400";
-
-                        return (
-                            <div
+                <div className="flex flex-col md:flex-row gap-12 lg:gap-24">
+                    {/* Tabs / List */}
+                    <div className="flex flex-col gap-6 w-full md:w-1/3">
+                        {steps.map((step, i) => (
+                            <button
                                 key={i}
-                                className={`min-w-[85vw] md:min-w-[400px] flex-shrink-0 snap-start border-l border-white/20 pl-8 flex flex-col justify-between h-[500px] transition-colors duration-500 p-6 relative group overflow-hidden ${bgClass}`}
+                                onClick={() => setActiveTab(i)}
+                                className={`text-left group flex items-baseline gap-4 transition-all duration-300 ${activeTab === i ? "opacity-100" : "opacity-30 hover:opacity-100"
+                                    }`}
                             >
-                                <div className={`text-6xl font-serif font-bold ${numClass}`}>
-                                    {step.num}
-                                </div>
+                                <span className="font-mono text-xs text-white/50">{step.num}</span>
+                                <h3 className={`font-serif text-3xl md:text-4xl ${activeTab === i ? "text-white" : "text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"}`}>
+                                    {step.title}
+                                </h3>
+                            </button>
+                        ))}
+                    </div>
 
-                                <div className="relative w-full h-40 my-6 grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100">
+                    {/* Content Area */}
+                    <div className="w-full md:w-2/3 relative h-[400px]">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeTab}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5 }}
+                                className="flex flex-col gap-8"
+                            >
+                                <div className="relative w-full h-[300px] bg-[#f5f2d8]/5 rounded-sm overflow-hidden border border-white/10">
                                     <Image
-                                        src={step.image}
-                                        alt={step.title}
+                                        src={steps[activeTab].image}
+                                        alt={steps[activeTab].title}
                                         fill
-                                        className="object-contain"
+                                        className="object-contain p-8 grayscale opacity-80"
                                     />
                                 </div>
-
-                                <div>
-                                    <h3 className="text-3xl font-serif mb-4">{step.title}</h3>
-                                    <p className={`${descClass} leading-relaxed font-light`}>
-                                        {step.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                    {/* Spacer */}
-                    <div className="min-w-[100px]" />
+                                <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-lg">
+                                    {steps[activeTab].desc}
+                                </p>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
         </section>

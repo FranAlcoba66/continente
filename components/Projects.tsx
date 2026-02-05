@@ -48,15 +48,24 @@ export default function Projects() {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className={`relative group overflow-hidden ${project.className} bg-gray-900`}
+                            className={`relative group overflow-hidden ${project.className} bg-gray-900 cursor-pointer`}
                         >
+                            {/* Static Image */}
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                                className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-0"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+
+                            {/* Video Placeholder (Revealed on Hover) */}
+                            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                                <span className="text-white/20 font-serif text-lg tracking-widest uppercase">
+                                    Video Preview
+                                </span>
+                            </div>
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 z-10">
                                 <h3 className="text-3xl font-serif italic mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{project.title}</h3>
                                 <p className="font-sans text-xs uppercase tracking-widest text-white/70 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{project.category}</p>
                             </div>

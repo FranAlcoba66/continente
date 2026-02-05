@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${playfair.variable} ${manrope.variable} antialiased`}
       >
+        <SmoothScroll />
         {children}
       </body>
     </html>
