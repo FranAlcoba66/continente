@@ -37,7 +37,7 @@ export default function Hero() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6 tracking-tight text-black"
                 >
-                    Branding y Estrategia de Contenido
+                    Comunicación Estratégica y Branding
                 </motion.h1>
 
                 <motion.p
@@ -46,7 +46,8 @@ export default function Hero() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="font-sans text-lg md:text-xl text-gray-800 max-w-xl mb-12 tracking-wide font-light"
                 >
-                    Creamos identidades digitales que se mueven a la velocidad de la cultura.
+                    Diseñamos flujos de información complejos. <br /> Rigurosos y encantadores. <br /> Vinculamos comunicación, diseño, datos y negocio.
+
                 </motion.p>
 
                 {/* Cinematic CTA */}

@@ -8,33 +8,21 @@ export default function Process() {
     const steps = [
         {
             num: "01",
-            title: "Descubrimiento",
-            desc: "Profundizamos en el ADN de tu marca. Entrevistas con stakeholders, investigación de mercado y auditoría cultural.",
-            image: "/project_branding.png", // Placeholder
+            title: "Posicionamiento",
+            desc: "Estructuramos el significado de su negocio. Desde el diagnóstico hasta la arquitectura de diseño, anclamos su marca en una base robusta.",
+            image: "/process_strategy.png",
         },
         {
             num: "02",
-            title: "Estrategia",
-            desc: "Definiendo el ángulo único. Posicionamiento, voz y el marco narrativo que guía todo.",
-            image: "/process_strategy.png", // Generated
+            title: "Reconocimiento",
+            desc: "Navegamos la identidad digital. Convertimos la estrategia en mensajes claros y tácticas de audiencia orientadas a la conversión.",
+            image: "/project_social.png",
         },
         {
             num: "03",
-            title: "Diseño",
-            desc: "Visualizando el alma de la marca. Sistemas de logotipos, tipografía, paletas de colores y guías de movimiento.",
-            image: "/project_social.png", // Placeholder
-        },
-        {
-            num: "04",
-            title: "Producción",
-            desc: "Dándole vida. Activos de alta fidelidad, animación e implementación digital en todos los puntos de contacto.",
-            image: "/project_motion.png", // Placeholder
-        },
-        {
-            num: "05",
-            title: "Lanzamiento",
-            desc: "Salir al mercado con impacto. Estrategia de despliegue, entrega de activos y soporte post-lanzamiento.",
-            image: "/project_branding.png", // Placeholder reuse
+            title: "Fidelización",
+            desc: "Sostenemos el crecimiento. Integramos equipos internos y procesos de mejora continua para que la marca viva y evolucione.",
+            image: "/project_motion.png",
         },
     ];
 

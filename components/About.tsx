@@ -15,17 +15,17 @@ export default function About() {
 
                 <div className="w-full md:w-1/2 flex flex-col justify-center">
                     <h2 className="text-sm font-sans uppercase tracking-widest mb-6 text-gray-500">
-                        El Estudio
+                        El Estudio — La filosofía de la agencia
                     </h2>
                     <h3 className="text-3xl md:text-4xl font-serif leading-tight mb-8">
-                        Creemos que cada marca tiene un continente de historias esperando ser descubiertas.
+                        Estructuramos el significado de su negocio.
                     </h3>
-                    <div className="space-y-6 text-lg font-light text-gray-800">
+                    <div className="space-y-6 text-lg font-light text-gray-800 leading-relaxed">
                         <p>
-                            Continente es una agencia de branding centrada en la estrategia. Navegamos el complejo paisaje de la identidad digital para construir una base sólida para tu negocio.
+                            Somos un estudio de comunicación centrado en la estrategia aplicada al negocio. Mediante sistemas visuales y contenido narrativo, anclamos el propósito de su marca para construir una base robusta que trascienda el entorno digital.
                         </p>
-                        <p>
-                            Desde sistemas visuales hasta contenido narrativo, estructuramos el significado desde el caos.
+                        <p className="font-medium text-black italic">
+                            Transformamos la complejidad en claridad estratégica.
                         </p>
                     </div>
                 </div>

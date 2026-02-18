@@ -90,24 +90,24 @@ const AnimatedIcon = ({ index }: { index: number }) => {
 
 const pillars = [
     {
-        title: "Identidad de Marca",
-        description: "Creamos sistemas visuales que hablan más fuerte que las palabras. Desde el diseño del logotipo hasta guías de marca completas.",
-        items: ["Estrategia", "Identidad Visual", "Dirección de Arte", "Guías"],
+        title: "Branding e Identidad Visual",
+        description: "Creamos sistemas visuales integrales con enfoque en las circunstancias sociales, culturales y económicas en las que se desarrolla la marca.",
+        items: ["Estrategia de Marca", "Diseño de Logotipo", "Manual de Identidad", "Dirección de Arte"],
     },
     {
-        title: "Diseño de Movimiento",
-        description: "Damos vida a marcas estáticas a través de tipografía cinética, animación 2D y visuales impactantes.",
-        items: ["Animación 2D", "Tipo Cinético", "Reveal de Logo", "Videos Explicativos"],
+        title: "Motion Graphics y Contenido Explicativo",
+        description: "Rediseñamos información compleja en mensajes claros mediante animación, visualización de datos y narrativas audiovisuales de alto impacto.",
+        items: ["Animación 2D", "Videos Corporativos", "Visualización de Datos", "Infografías Animadas"],
     },
     {
-        title: "Contenido Social",
-        description: "Producción de contenido estratégico para la era del algoritmo. Formatos de alta retención para IG, TikTok y YouTube.",
-        items: ["Reels y TikToks", "Estrategia de Contenido", "Producción YouTube", "Análisis de Tendencias"],
+        title: "Estrategia de Contenidos y Social Media",
+        description: "Diseñamos ecosistemas digitales donde el contenido trasciende el algoritmo. Creamos tácticas específicas para asegurar una presencia de marca sustentable, valiosa y posicionada a largo plazo.",
+        items: ["Content Marketing", "Narrativas para Vertical Video", "Producción de YouTube", "Estrategia Digital"],
     },
     {
-        title: "Soluciones Corporativas",
-        description: "Herramientas de comunicación de alto nivel. Diseñamos pitch decks y dashboards que cierran tratos.",
-        items: ["Pitch Decks", "Visualización de Datos", "Dashboards", "Kits de Onboarding"],
+        title: "Comunicación Corporativa y Presentaciones",
+        description: "Herramientas de comunicación de alto nivel para audiencias específicas. Diseñamos piezas que cierran tratos y estructuran la cultura organizacional.",
+        items: ["Pitch Decks", "Dashboards de Datos", "Internal Branding", "Kits de Onboarding"],
     },
 ];
 
